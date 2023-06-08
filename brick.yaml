@@ -1,0 +1,52 @@
+name: new_feature
+description: A new brick created with the Mason CLI.
+
+# The following defines the brick repository url.
+# Uncomment and update the following line before publishing the brick.
+repository: https://github.com/siddhant/new_feature
+
+# The following defines the version and build number for your brick.
+# A version number is three numbers separated by dots, like 1.2.34
+# followed by an optional build number (separated by a +).
+version: 1.0.0+1
+
+# The following defines the environment for the current brick.
+# It includes the version of mason that the brick requires.
+environment:
+  mason: ">=0.1.0-dev.49 <0.1.0"
+
+# Variables specify dynamic values that your brick depends on.
+# Zero or more variables can be specified for a given brick.
+# Each variable has:
+#  * a type (string, number, boolean, enum, or array)
+#  * an optional short description
+#  * an optional default value
+#  * an optional list of default values (array only)
+#  * an optional prompt phrase used when asking for the variable
+#  * a list of values (enums only)
+vars:
+  feature_name:
+    type: string
+    description: For creating a new feature type feature name
+    prompt: What is your features name?
+
+  model_name:
+    type: string
+    description: For creating a model type feature
+    prompt: What is your model name?
+# \lib
+#   \{{future_name}}
+#     \presentation
+#       \widgets
+#     {{future_name}}_screen.dart
+
+#     \bloc
+#       {{future_name}}_bloc.dart
+#       \state
+#         {{future_name}}_state.dart
+
+#     \domain
+#       \models
+#         {{model_name}}_model.dart
+#       \repository
+#         {{future_name}}_repository.dart
